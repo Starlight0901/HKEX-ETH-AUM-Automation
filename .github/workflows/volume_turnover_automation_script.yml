@@ -30,11 +30,8 @@ jobs:
       run: |
         git config --local user.name "GitHub Actions"
         git config --local user.email "actions@github.com"
-        if git diff --quiet; then
-          echo "No changes detected, skipping commit."
-        else
-          git add eth_volume_turnover_aum_data_new.csv
-          git commit -m "Update CSV with latest data"
-          git push
-        fi
+        git add eth_volume_turnover_aum_data_new.csv
+        git commit -m "Update CSV with latest data"
+        git push
+        
 
